@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/food_9.jpg"); /* ✅ use a correct relative path */
+    background-size: cover;                    /* ✨ fill entire screen */
+    background-position: center;               /* 🎯 keep image centered */
+    background-repeat: no-repeat;              /* ❌ no repeating */
+    background-attachment: fixed;              /* optional for parallax effect */
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    font-weight: 300;
+     filter: brightness(90%);
+    /* opacity: 0.4; */
+    
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background-color: rgba(48, 3, 3, 0.4); 
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    transition: 0.2s ease-in-out;
+  }
+  button:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+  }
+/* navigation */
+
+nav{
+    box-shadow: red;
+    box-shadow: 5px 10px 20px rgba(126, 203, 222, 0.5);
+    position: sticky;
+    top: 0;
+    margin-bottom: 32px;
+    background-color: rgb(22, 1, 1);
+    backdrop-filter: blur(10px);
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     padding: 5px; 
+
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* .logo_container{
+        display: flex;
+        align-items: center;
+        width: 20px;
+} */
+.logo_container img {
+    height: 55px;        /* or whatever fits your navbar */
+    width: auto;         /* maintain aspect ratio */
+    display: block;  
+    border-radius: 10px;    /* removes bottom spacing */
+
+}
+
+
+.bar_icon{
+    font-size: 32 px;
+    background-color: white;
+}
+
+
+/* hero section */
+
+.hero {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero img{
+    height: 250px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 10px 20px 50px rgba(236, 243, 161, 0.5);
+
+  }
+  .hero_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tag {
+    background-color: #149f39;
+    padding: 5px 10px;
+    color: white;
+    align-self: flex-start;
+  }
+  
+  .hero_content h1 {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: white;
+    text-shadow: 2px 5px 5px rgba(225, 228, 126, 0.6);
+
+  }
+
+  .hero_content h4{
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: white;
+  }
+  .highlighted-text {
+    background-color: rgba(212, 229, 253, 0.6); /* white with 60% opacity */
+    padding: 10px;
+    border-radius: 8px;     /* optional: rounded corners */
+    color: #000000;  
+    font-weight: bold;          /* make text readable if bg is light */
+    width: fit-content;     /* or max-width: 600px, based on your design */
+  }
+  
+
+  .explore_btn {
+    background: #ffc066;
+    align-self: flex-start;
+  }
+
+  /* Features Section */
+.features {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .feature {
+    display: flex;
+  gap: 20px;
+  padding: 20px;
+  color: #149f39;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(43, 219, 202, 0.05);
+  border-radius: 10px;
+  }
+  .feature h4{
+    color: aqua;
+    font-family: 'Berkshire Swash', cursive;
+  }
+  .feature_content {
+    color: rgb(22, 190, 25); 
+    /* or any color you want */
+
+font-weight: bold;
+  }
+  
+  .feature img {
+    width: 50px;
+    height: 50px;
+  }
+  .feature:hover {
+    transform: scale(1.05); /* slight zoom */
+    box-shadow: 0 40px 20px rgba(127, 220, 231, 0.2); /* visible shadow */
+    cursor: pointer;
+  }
+  .divider {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+  }
+
+  /* Menu Section */
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 50px 0;
+    align-items: center;
+  }
+  .menu .tag {
+    align-self: center;
+  }
+
+  h2 {
+    font-family: 'Satisfy', cursive;
+    font-size: 2.5rem;      /* adjust size as needed */
+    text-align: center;     /* center the text */
+    color: #e67e22;  
+    font-size: 80px;       /* example color */
+  }
+  
+  
+  h3 {
+    font-size: 50px;
+    font-family: 'Molle', cursive;
+    color: #3d93e8;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-shadow: 1000px 10px 200px rgba(202, 187, 23, 0.1);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .grid img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .grid img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Footer Section */
+  .footer_logo img {
+    height: 40px;   /* Reduce this value as needed */
+    width: auto;    /* Keeps the aspect ratio */
+    border-radius: 6px; /* Optional rounded corners */
+    display: block;
+  }
+  
+
+footer {
+    background-color: #100a01;
+  }
+  footer h5 {
+    /* font-family: 'Satisfy', cursive; or 'Molle', or any font you like */
+    font-size: 20px;
+    color: #e2e266; /* Change to your preferred color */
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Optional: makes all caps */
+    letter-spacing: 1px;       /* Optional: spacing between letters */
+  }
+  
+  .link_lists h3{
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+  }
+  .link_lists ul {
+    list-style: none;
+  }
+  .link_lists ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: white;
+  }
+  .news_letter h3 {
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+  }
+  .news_letter input {
+    padding: 5px 40px;
+    margin-bottom: 10px;
+  }
+  .footer_container {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon_container {
+    display: flex;
+    gap: 15px;
+    font-size: 20px; /* reduced from 32px to 20px */
+    height: 40px;     /* optional: adjust height to fit new size */
+  }
+  
+  .icon_container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .icon_container .icon i {
+    font-size: 18px;  /* 👈 Reduce this size as needed */
+    color: #2ecec6;      /* Optional: Set your icon color */
+    transition: 0.3s ease;
+  }
+  
+  .icon_container .icon i:hover {
+    color: #ff6600;   /* Optional: hover effect */
+  }
+  
+  
+  
+  
+  
+
+
+
+  @media (max-width: 786px) {
+    .hero {
+      flex-direction: column;
+    }
+  
+    .hero_image {
+      display: flex;
+      justify-content: center;
+    }
+    .hero_image img {
+      width: 80%;
+    }
+    .hero_content {
+      gap: 10px;
+  
+      padding: 0 20px;
+    }
+    .hero_content h1 {
+      font-size: 32px;
+    }
+    .features {
+      flex-direction: column;
+    }
+    .feature {
+      flex-direction: column;
+    }
+    .grid {
+      padding: 10px;
+    }
+    .grid-image {
+      border-radius: 0px;
+    }
+    .footer_container {
+      flex-direction: column;
+    }
+  }
+
